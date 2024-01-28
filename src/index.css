@@ -1,0 +1,162 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #111827;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #999;
+}
+
+.site-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.site-logo > svg {
+  fill: aquamarine;
+  color: #000;
+  filter: drop-shadow(0px 0px 2px aquamarine);
+  height: 6.5rem;
+  width: 6.5rem;
+}
+
+.logo-text {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 0 0 2px aquamarine;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  border: 1px solid aquamarine;
+  border-radius: 1rem;
+  background-color: aquamarine;
+  padding: 0.5rem 1rem;
+  width: 20rem;
+  font-size: 1.5rem;
+}
+
+.search::placeholder {
+  color: #222;
+}
+
+.search-btn {
+  border: 1px solid #111827;
+  background-color: #111827;
+}
+
+.search-btn > svg {
+  height: 2.5rem;
+  width: 2.5rem;
+  fill: #111827;
+  color: aquamarine;
+}
+
+.toggle-container > button {
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid aquamarine;
+  font-weight: 700;
+  background-color: aquamarine;
+}
+
+main {
+  border-radius: 0.5rem;
+  padding: 2rem 4rem;
+  margin: 2rem;
+  display: flex;
+  gap: 4rem;
+}
+
+.infoContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    " city city region region"
+    "country condition temp_c temp_f ";
+  gap: 2rem;
+  width: 80vw;
+}
+
+.condition-icon {
+  width: 40%;
+  padding: 2rem;
+}
+
+.condition-icon > svg {
+  color: aquamarine;
+  background-color: #999;
+  border-radius: 2rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  /*   justify-content: center;
+  align-items: center; */
+  width: fit-content;
+}
+
+.key {
+  font-size: 1rem;
+  color: #999;
+}
+
+.value {
+  font-size: 2rem;
+  color: aquamarine;
+}
+
+.city {
+  grid-area: city;
+}
+
+.region {
+  grid-area: region;
+}
+
+.country {
+  grid-area: country;
+}
+
+.city > .value,
+.region > .value {
+  font-size: 3rem;
+}
+
+.temp_c {
+  grid-area: temp_c;
+}
+
+.temp_f {
+  grid-area: temp_f;
+}
+
+.condition {
+  grid-area: condition;
+}
+
+button {
+  cursor: pointer;
+}
