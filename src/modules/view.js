@@ -1,4 +1,6 @@
-import sunny from "../assets/sunny.svg";
+import sunny from "../assets/Sunny.svg";
+import rainy from "../assets/Rainy.svg";
+import cloudy from "../assets/Cloudy.svg";
 
 const infoContainer = document.querySelector(".infoContainer");
 const searchBtn = document.querySelector(".search-btn");
@@ -52,13 +54,13 @@ const displayIcons = function () {
   img.src = `assets/Sunny.svg`;
 
   if (condition === "Sunny") {
-    img.src = `assets/Sunny.svg`;
+    img.src = sunny;
   }
   if (condition === "Cloudy" || condition === "Fog") {
-    img.src = `assets/Cloudy.svg`;
+    img.src = cloudy;
   }
   if (condition === "Raining" || condition === "Light rain") {
-    img.src = `assets/Rainy.svg`;
+    img.src = rainy;
   }
   console.log(condition === "Light rain");
   conditionIcon.appendChild(img);
